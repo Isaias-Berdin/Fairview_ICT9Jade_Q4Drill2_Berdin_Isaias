@@ -40,11 +40,13 @@
                 <input type="number" class="form-control" id="humid" placeholder="Enter...">
                 <br>
                 <button type="btn btn-success" onclick="HeatIndex()">Check</button>
+                <br>
             </div>
         </div>
     </div>
-    <br><br><br>
+    <br>
     </div>
+
     
 
 
@@ -65,21 +67,23 @@
 
             switch (true) {
                 case (HI <= 27):
-                    alert("Comfortable/Cool");
+                    status = "Comfortable/Cool";
                     break;
                 case (HI <= 32):
-                    alert("Warm");
+                    status = "Warm";
                     break;
                 case (HI <= 37):
-                    alert("Hot");
+                    status = "Hot";
                     break;
                 case (HI <= 41):
-                    alert("Very Hot/Caution");
+                    status = "Very Hot/Caution";
                     break;
                 case (HI >= 42):
-                    alert("Extreme Heat/Danger");
+                    status = "Extreme Heat/Danger";
                     break;
             }
+
+             alert("Heat Index: " + HI.toFixed(1) + "  C Status: " + status);
         }
     </script>
 
